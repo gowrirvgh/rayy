@@ -8,3 +8,4 @@ then
 echo "The first number is great"
 else
 echo "The second number is great"
+fi
