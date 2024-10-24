@@ -1,33 +1,49 @@
-# Define a function for the calculator
-def calculator():
-    print("Simple Python Calculator")
-    
-    # Ask the user for the operation they want to perform
-    operation = input("Choose operation (+, -, *, /)
+# Simple calculator in Python
 
-    # Ask the user for two numbers
-    try:
-        num1 = float(input("Enter first number: "))
-        num2 = float(input("Enter second number: "))
-    except ValueError:
-        print("Invalid input! Please enter numbers.")
-        return
+# Function to add two numbers
+def add(x, y):
+    return x + y
 
-    # Perform the chosen operation
-    if operation == '+':
-        print(f"The result is: {num1 + num2}")
-    elif operation == '-':
-        print(f"The result is: {num1 - num2}")
-    elif operation == '*':
-        print(f"The result is: {num1 * num2}")
-    elif operation == '/':
-        if num2 == 0:
-            print("Error! Division by zero.")
-        else:
-            print(f"The result is: {num1 / num2}")
+# Function to subtract two numbers
+def subtract(x, y):
+    return x - y
+
+# Function to multiply two numbers
+def multiply(x, y):
+    return x * y
+
+# Function to divide two numbers
+def divide(x, y):
+    if y != 0:
+        return x / y
     else:
-        print("Invalid operation!")
+        return "Cannot divide by zero!"
 
-# Run the calculator
-calculator()
+# Main program
+print("Select operation:")
+print("1. Add")
+print("2. Subtract")
+print("3. Multiply")
+print("4. Divide")
 
+# Take input from the user
+choice = input("Enter choice(1/2/3/4): ")
+
+num1 = float(input("Enter first number: "))
+num2 = float(input("Enter second number: "))
+
+if choice == '1':
+    print(f"{num1} + {num2} = {add(num1, num2)}")
+
+elif choice == '2':
+    print(f"{num1} - {num2} = {subtract(num1, num2)}")
+
+elif choice == '3':
+    print(f"{num1} * {num2} = {multiply(num1, num2)}")
+
+elif choice == '4':
+    result = divide(num1, num2)
+    print(f"{num1} / {num2} = {result}")
+
+else:
+    print("Invalid input")
