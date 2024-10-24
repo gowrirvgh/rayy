@@ -3,7 +3,7 @@ def calculator():
     print("Simple Python Calculator")
     
     # Ask the user for the operation they want to perform
-    operation = input("Choose operation (+, -, *, /): ")
+    operation = input("Choose operation (+, -, *, /)
 
     # Ask the user for two numbers
     try:
